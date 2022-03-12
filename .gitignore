@@ -1,0 +1,7 @@
+node_modules
+vendor
+public/images
+public/audios
+public/videos
+.env
+*.zip

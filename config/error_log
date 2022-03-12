@@ -1,0 +1,4 @@
+[08-Feb-2022 09:44:01 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function config() in /home/doptorr/public_html/config/mail.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/doptorr/public_html/config/mail.php on line 19
