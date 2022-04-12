@@ -79,14 +79,9 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-location-arrow"></i>Services</a>
                             <ul class="sub-menu children dropdown-menu">
 
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/items') }}">{{ Helper::translation(5442,$translate,'') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/item-features') }}">{{ Helper::translation(6267,$translate,'') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/item-type') }}">{{ Helper::translation(2937,$translate,'') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/attributes') }}">{{ Helper::translation(5067,$translate,'') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/orders') }}">{{ Helper::translation(5619,$translate,'') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/coupons') }}">{{ Helper::translation('614ee2c3c306c',$translate,'Coupons') }}</a></li>
-                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/deposit') }}">{{ Helper::translation('61b32a5049abd',$translate,'Deposit') }}</a></li>
-                            </ul>
+                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/services') }}">Service List</a></li>
+                                <li><i class="menu-icon fa fa-location-arrow"></i><a href="{{ url('/admin/service-orders') }}">Service Orders</a></li>
+                              </ul>
                         </li>
                     @endif
                     @if(in_array('subscription',$avilable))

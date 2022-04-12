@@ -217,6 +217,12 @@ Route::group(['middleware' => ['is_admin', 'XSS', 'HtmlMinifier', 'cache']], fun
 	Route::get('/admin/restore-items/{token}', 'Admin\ItemController@view_restore_items');
 	Route::get('/admin/delete-items/{token}', 'Admin\ItemController@permanent_delete_items');
 	/* items */
+
+    /*
+     * SERVICES
+     */
+
+    Route::get('/admin/services', 'Admin\ServiceController@service_list');
 	
 	/* product import & export */
 	Route::get('/admin/products-import-export', 'Admin\ImportExportController@view_products_import_export');

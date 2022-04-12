@@ -15,10 +15,15 @@
             @endif
             <div class="topbar-text text-nowrap d-none d-md-inline-block border-left border-light pl-3 ml-3"></div>
           </div>
-          <div class="topbar-text dropdown d-md-none ml-auto"><a class="topbar-link dropdown-toggle" href="#" data-toggle="dropdown">{{ Helper::translation(3018,$translate,'') }} / {{ Helper::translation(2910,$translate,'') }}@if($allsettings->site_blog_display == 1) / {{ Helper::translation(2877,$translate,'') }}@endif</a>
+
+          <a class="dropdown-item d-md-none d-lg-none d-xl-none topbar-link" href="{{ url('/service') }}"><i class=""></i>Switch to Service</a>
+
+          <div class="topbar-text dropdown d-md-none ml-auto">
+            <a class="topbar-link dropdown-toggle" href="#" data-toggle="dropdown">
+              {{ Helper::translation(3018,$translate,'') }} / {{ Helper::translation(2910,$translate,'') }}@if($allsettings->site_blog_display == 1) / {{ Helper::translation(2877,$translate,'') }}@endif
+            </a>
             <ul class="dropdown-menu dropdown-menu-right">
-                 <li><a class="dropdown-item" href="{{ route('service.home') }}"><i class=" text-muted mr-2"></i>Switch to Service</a></li>
-              @if($addition_settings->verify_mode == 1) 
+              @if($addition_settings->verify_mode == 1)
               <li><a class="dropdown-item" href="{{ URL::to('/verify') }}"><i class="dwg-check text-muted mr-2"></i>{{ Helper::translation('614d4f7745243',$translate,'Verify Purchase') }}</a></li>
               @endif
               @if(Auth::guest())
@@ -36,7 +41,7 @@
             </ul>
           </div>
           <div class="d-none d-md-block ml-3 text-nowrap">
-                <a class="topbar-link ml-3 pl-3 d-none d-md-inline-block" href="{{ route('service.home') }}"><i class="mt-n1"></i>Switch to Service</a>
+                <a class="topbar-link ml-3 pl-3 d-none d-md-inline-block" href="{{ url('/service') }}"><i class="mt-n1"></i>Switch to Service</a>
           @if($addition_settings->verify_mode == 1)
           <a class="topbar-link ml-3 pl-3 d-none d-md-inline-block" href="{{ URL::to('/verify') }}"><i class="dwg-check mt-n1"></i>{{ Helper::translation('614d4f7745243',$translate,'Verify Purchase') }}</a>
           @endif

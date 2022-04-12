@@ -5,3 +5,6 @@ public/audios
 public/videos
 .env
 *.zip
+storage/framework
+storage/logs
+service/vendor
