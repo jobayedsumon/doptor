@@ -313,6 +313,7 @@ if($seller_verification != "ok"){
 					<p class="processing-fee">Processing Fee <span class="float-right"><?= showPrice($processing_fee); ?> </span></p>
 					<hr class="processing-fee">
 					<p>Total <span class="float-right font-weight-bold total-price"><?= showPrice($total); ?></span></p>
+					<p><span class="float-right font-weight-bold my-2"><?= ($total * 86.32); ?> BDT</span></p>
 					<hr>
                     <form action="checkout_charge" method="post" id="shurjopay-form"><!--- shurjopay-form Starts --->
                         <input name='shurjopay' type='submit' class="btn btn-lg btn-success btn-block" value="Pay with Shurjopay"/>

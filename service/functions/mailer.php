@@ -121,6 +121,9 @@ function load_view($file,$data=''){
    }
 
    $lang = ( isset($data['lang']) && !empty($data['lang']) ) ? $data['lang'] : $template_folder;
+   if(!$lang)  {
+       $lang = "en";
+   }
 
    ob_start();
    require("$dir"."emails/templates/{$lang}/$file.php");

@@ -1,11 +1,14 @@
 <?php
 session_start();
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once("includes/db.php");
 require_once("functions/functions.php");
 require_once("functions/mailer.php");
 if(!isset($_SESSION['checkout_seller_id']) and !isset($_SESSION['cart_seller_id']) and !isset($_SESSION['message_offer_id']) and !isset($_SESSION['offer_id'])){
-	echo "<script>window.open('index','_self');</script>";
+
+    echo "<script>window.open('index','_self');</script>";
 }
 
 ?>
@@ -57,7 +60,7 @@ if(!isset($_SESSION['seller_user_name'])){
 }
 
 if(isset($_SESSION['seller_user_name'])){
-	
+
 	$login_seller_user_name = $_SESSION['seller_user_name'];
 	$select_login_seller = $db->select("sellers",array("seller_user_name" => $login_seller_user_name));
 	$row_login_seller = $select_login_seller->fetch();

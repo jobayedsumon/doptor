@@ -71,6 +71,7 @@ public function execute_payment($reference_no,$method){
   
   $get_order = $db->query("select * from temp_orders where reference_no=:reference_no AND method=:method AND not type='cart_item' AND not method='coinpayments'",['reference_no'=>$reference_no,'method'=>$method]);
   $data = $get_order->fetch();
+
   $count_order = $get_order->rowCount();
   if($count_order == 0){
     echo "<script> window.open('$site_url/index','_self'); </script>";
